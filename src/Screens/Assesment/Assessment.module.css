@@ -1,0 +1,204 @@
+@import '../../styles/_variables.css';
+
+/* Container for the entire assessment page */
+.assessment {
+  display: flex;
+  flex: 1;
+  background: var(--white);
+  margin: 0 15px;
+  flex-direction: column;
+}
+
+/* Styling for the header section */
+.header {
+  height: 70px;
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+  border-bottom: 1px solid #dde5ea;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the title in the header */
+.header h3 {
+  color: var(--primary);
+  padding: 15px;
+  border-right: 1px solid #dde5ea;
+}
+.title {
+  padding: 10px;
+}
+/* Styling for the navigation in the header */
+.headNav {
+  color: var(--info);
+  font-weight: bold;
+  height: 100%;
+  border-bottom: 1px solid var(--info);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0px 10px;
+  font-size: 14px;
+}
+
+/* Styling for the menu toggle button */
+.menuToggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  background: var(--info-light);
+  cursor: pointer;
+}
+
+/* Styling for the menu toggle icon */
+.menuToggleIcon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Styling for the filter box section */
+.filterBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+/* Styling for the filter icons */
+.filterIcons {
+  width: 34px;
+  height: 34px;
+  margin: 3px;
+  padding: 5px;
+}
+
+/* Styling for the icon box */
+.iconBox {
+  display: none;
+}
+
+/* Styling for the mobile view */
+.mobile {
+  display: block;
+}
+
+/* Styling for the assessment box */
+.assessmentBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 10px;
+}
+
+/* Styling for the "New Assessment" section */
+.newAssessment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  background: var(--system-background);
+  padding: 10px;
+}
+
+/* Styling for the icon in the "New Assessment" section */
+.newAddIcon {
+  background: var(--white);
+  display: flex;
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+
+/* Styling for the heading in the "New Assessment" section */
+.newAssessment h3 {
+  font-weight: 500;
+}
+
+/* Styling for the paragraph in the "New Assessment" section */
+.newAssessment p {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
+/* Styling for the mobile navigation */
+.mobileNav {
+  display: none;
+}
+
+/* Media query for screens up to 480px wide */
+@media (max-width: 480px) {
+  .assessment {
+    margin: 0px;
+  }
+  .menuToggle {
+    display: flex;
+  }
+  .iconBox {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+  .newAssessment {
+    width: 98%;
+  }
+  .newAssessment h3 {
+    font-size: 14px;
+  }
+  .newAddIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .assessmentBox {
+    grid-template-columns: 1fr;
+  }
+  .headNav {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+    height: 50px;
+    text-align: center;
+  }
+  .mobileNav > * {
+    width: 100%;
+    color: var(--info);
+    font-weight: 500;
+    height: 100%;
+    border-bottom: 1px solid var(--info);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: 14px;
+  }
+  .unactive {
+    color: var(--primary-low);
+    border-bottom: 1px solid var(--system-background);
+  }
+}
+
+/* Media query for screens between 481px and 1024px wide */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .menuToggle {
+    display: flex;
+  }
+  .assessmentBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

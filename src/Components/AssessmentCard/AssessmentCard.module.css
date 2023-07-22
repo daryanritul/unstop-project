@@ -1,0 +1,188 @@
+/* Import variables from a separate CSS file */
+@import '../../styles/_variables.css';
+
+/* Styling for the assessment card container */
+.assessmentCard {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  position: relative;
+}
+
+/* Styling for the three dots icon */
+.dots {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Styling for the header section of the assessment card */
+.assignHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 2px dashed #bacbd5;
+}
+
+/* Styling for the title and subtitle data */
+.titleData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Styling for the title text */
+.titleData p {
+  font-weight: 600;
+}
+
+/* Styling for the subtitle data */
+.subData {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* Styling for the subtitle text with a right border */
+.subData p {
+  margin-right: 5px;
+  padding-right: 5px;
+}
+.subTitle {
+  border-right: 1px solid var(--grey);
+}
+
+/* Styling for the date text */
+.date {
+  color: var(--grey);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 5px;
+}
+
+/* Styling for the footer section of the assessment card */
+.assignFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styling for the values in the footer */
+.footerValue {
+  display: flex;
+}
+
+/* Styling for each individual value in the footer */
+.val {
+  color: var(--primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 16.8px */
+  margin: 10px;
+}
+
+/* Styling for the footer section with icons and additional text */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the text in the footer */
+.footer p {
+  font-size: 12px;
+}
+
+/* Styling for the share link section */
+.sharelink {
+  display: flex;
+  height: 28px;
+  padding: 2px 8px 2px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 50px;
+  border: 1px solid var(--primary);
+  background: var(--white);
+  font-size: 12px;
+}
+
+/* Styling for the share link icon */
+.shareIcon {
+  width: 15px;
+  height: 15px;
+}
+
+/* Styling for the name icons section */
+.nameIcons {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+}
+
+/* Styling for each individual name icon */
+.nameIcon {
+  position: absolute;
+  top: 10px;
+  background: var(--accent);
+  color: var(--white);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  font-size: 12px;
+  border: 2px solid var(--white);
+}
+
+/* Styling for the first name icon */
+.nameIcon.one {
+  left: 0px;
+}
+
+/* Styling for the second name icon */
+.nameIcon.two {
+  left: 15px;
+  background: #3079e1;
+}
+
+/* Styling for the third name icon */
+.nameIcon.three {
+  left: 30px;
+  background: #e9407a;
+}
+
+/* Media query for screens with maximum width of 480px */
+@media (max-width: 480px) {
+  /* Adjustments to the header section for smaller screens */
+  .assignHead {
+    flex-direction: row;
+  }
+  /* Adjust font sizes for smaller screens */
+  .titleData p {
+    font-size: 14px;
+  }
+  .subData p {
+    font-size: 12px;
+  }
+  .date {
+    font-size: 10px;
+  }
+  .val {
+    font-size: 10px;
+  }
+  /* Adjust font size and padding for the share link section on smaller screens */
+  .sharelink {
+    font-size: 12px;
+    padding: 5px;
+  }
+}

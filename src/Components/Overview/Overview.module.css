@@ -1,0 +1,223 @@
+/* Import variable CSS file */
+@import '../../styles/_variables.css';
+
+/* Main container for the Overview component */
+.overview {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin: 5px 10px;
+  overflow: hidden;
+  transform-origin: top;
+  transition: all ease-in-out 300ms;
+}
+
+/* Overview card 1 */
+.ovr1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+/* Overview card 2 */
+.ovr2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+/* Overview card 3 */
+.ovr3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+/* Overview card 4 */
+.ovr4 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+/* Customize detailIcon for Overview card 3 */
+.ovr3 .detailIcon {
+  background: #fce8ef;
+}
+
+/* Customize detailIcon for Overview card 4 */
+.ovr4 .detailIcon {
+  background: var(--info-light);
+}
+
+/* Details card styling */
+.detailsCard {
+  border-right: 1px solid var(--border);
+  padding: 0 10px;
+}
+
+/* Styling for <p> tags within details card */
+.detailsCard p {
+  font-size: 14px;
+  padding: 0px;
+  padding-top: 8px;
+  font-weight: 600;
+}
+
+/* Styling for the detail section */
+.detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Styling for the values section */
+.values {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Styling for the divider */
+.divider {
+  border-right: 1px solid var(--border);
+  height: 50px;
+}
+
+/* Styling for <p> tags within the values section */
+.values p {
+  padding: 2px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Styling for <h2> tags within the values section */
+.values h2 {
+  display: flex;
+}
+
+/* Styling for the subvalue section */
+.subvalue {
+  color: var(--success);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+/* Styling for the detailIcon */
+.detailIcon {
+  background: var(--accent-light);
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+}
+
+/* Remove border for Overview card 4 */
+.ovr4 {
+  border: none;
+}
+
+/* Media queries for smaller screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .overview {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  /* Set properties for opening the Overview */
+  .overview.open {
+    transform: scale(1);
+    height: auto;
+  }
+
+  /* Set properties for closing the Overview */
+  .overview.close {
+    transform: scale(1, 0);
+    height: 0px;
+  }
+
+  .ovr1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .ovr2 {
+    grid-area: 2 / 1 / 3 / 5;
+  }
+
+  .ovr3 {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+
+  .ovr4 {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  /* Remove borders for Overview card 4, 3, and 2 */
+  .ovr4,
+  .ovr3,
+  .ovr2 {
+    border: none;
+  }
+
+  /* Add top and bottom borders for Overview card 2 */
+  .ovr2 {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Adjust padding for values section */
+  .values {
+    padding: 8px;
+  }
+
+  /* Adjust font size for <h2> tags */
+  .values h2 {
+    font-size: 14px;
+  }
+}
+
+/* Media queries for larger screens (min-width: 481px) and (max-width: 1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .overview {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .ovr1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .ovr2 {
+    grid-area: 2 / 1 / 3 / 5;
+  }
+
+  .ovr3 {
+    grid-area: 3 / 1 / 4 / 5;
+  }
+
+  .ovr4 {
+    grid-area: 1 / 3 / 2 / 5;
+  }
+
+  /* Remove borders for Overview card 4, 3, and 2 */
+  .ovr4,
+  .ovr3,
+  .ovr2 {
+    border: none;
+  }
+
+  /* Add top and bottom borders for Overview card 2 */
+  .ovr2 {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Adjust padding for values section */
+  .values {
+    padding: 8px;
+  }
+}

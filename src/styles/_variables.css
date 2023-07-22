@@ -1,0 +1,21 @@
+:root {
+  --system-background: #f6f8fa;
+  --primary: #1c4980;
+  --primary-low: #3e6493;
+
+  --white: #fff;
+  --grey: #8da4bf;
+
+  --info: #0073e6;
+  --info-light: #e5f1fc;
+  --info-extraLight: #f2f8fe;
+
+  --accent: #6548ee;
+  --accent-light: #ebe8fd;
+
+  --danger: #d63500;
+  --danger-light: #fbebea;
+
+  --success: #05c165;
+  --border: #dadce0;
+}
